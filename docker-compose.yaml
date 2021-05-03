@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  db:
+    image: "postgres:11.6"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: abc123
+    volumes:
+      - ./db/postgres/:/docker-entrypoint-initdb.d/
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
