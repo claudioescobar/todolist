@@ -1,3 +1,6 @@
+delete from tb_task;
+delete from tb_user;
+
 insert into tb_user(id,login,password,user_name) values(1,'teste1@teste.com','123','Teste 1 da Silva');
 insert into tb_user(id,login,password,user_name) values(2,'teste2@teste.com','321','Teste 2 Junior');
 insert into tb_user(id,login,password,user_name) values(3,'teste3@teste.com','333','Teste 3 Maria');

@@ -15,7 +15,7 @@ public class CustomPostgreSQLContainer extends PostgreSQLContainer<CustomPostgre
         if (container == null) {
             container = new CustomPostgreSQLContainer();
             container.addEnv("POSTGRES_PASSWORD", "abc123");
-            container.withClasspathResourceMapping("db-init/", "/home/oracle", BindMode.READ_ONLY);
+            container.withClasspathResourceMapping("postgres/", "/docker-entrypoint-initdb.d/", BindMode.READ_ONLY);
         }
         return container;
     }
